@@ -155,4 +155,4 @@ tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
 
 
-// roastSelection.addEventListener('select', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
