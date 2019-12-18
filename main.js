@@ -53,9 +53,9 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
-            if(coffee.name === coffeeSearch){
-                filteredCoffees.splice(coffee)
-            }
+            // if(coffee.name === searchCoffees()){
+            //     filteredCoffees.splice(coffee)
+            // }
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -87,28 +87,32 @@ function updateCoffees(e) {
 
 //attempt #3
 //
-var coffeeSearch =
-    $(document).ready(function(){
-        $("#myInput").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#coffeeDIV *").filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-        });
-    });
-console.log(coffeeSearch);
+// var coffeeSearch =
+//     $(document).ready(function(){
+//         $("#myInput").on("keyup", function() {
+//             var value = $(this).val().toLowerCase();
+//             console.log("value " + value);
+//             $("#coffeeDIV *").filter(function() {
+//                // $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+//                 console.log($(this).text());
+//
+//                 //console.log("here" + $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1));
+//             });
+//         });
+//     });
+// console.log(coffeeSearch);
 
 //attempt #4
-// function searchCoffees(value){
-//     var filteredCoffees = [];
-//
-//     for (var i = 0; i<coffees.length; i++){
-//         if (coffees[i].name.toLowerCase().indexOf(value.toLowerCase()) > -1){
-//             filteredCoffees.push(coffees[i]);
-//         }
-//     }
-//     tbody.innerHTML = renderCoffees(filteredCoffees);
-// };
+function searchCoffees(value){
+    var filteredCoffees = [];
+
+    for (var i = 0; i<coffees.length; i++){
+        if (coffees[i].name.toLowerCase().includes(value.toLowerCase())){
+            filteredCoffees.push(coffees[i]);
+        }
+    }
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+};
 
 
 // if(coffeeSelection == coffeeSearch && updateCoffees == coffees.roast){
@@ -154,5 +158,8 @@ tbody.innerHTML = renderCoffees(coffees);
 //original select submit
 submitButton.addEventListener('click', updateCoffees);
 
-
+// coffeeSelection.addEventListener('change', );
 roastSelection.addEventListener('change', updateCoffees);
+coffeeSelection.addEventListener("keyup", function() {
+    searchCoffees(coffeeSelection.value);
+});
