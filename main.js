@@ -52,12 +52,20 @@ function updateCoffees(e) {
 //     //     }
 //     // }
 //
-//     //attempt #3
+//
 //
 //     tbody.innerHTML = renderCoffees(filteredCoffees);
 // }
 
-
+//attempt #3
+$(document).ready(function(){
+    $("#site-search").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#coffees").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
