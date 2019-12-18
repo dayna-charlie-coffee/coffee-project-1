@@ -70,22 +70,33 @@ function updateCoffees(e) {
 // }
 
 //attempt #3
-
-var coffeeSearch =
-    $(document).ready(function(){
-        $("#myInput").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#coffeeDIV *").filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-        });
-    });
+//
+// var coffeeSearch =
+//     $(document).ready(function(){
+//         $("#myInput").on("keyup", function() {
+//             var value = $(this).val().toLowerCase();
+//             $("#coffeeDIV *").filter(function() {
+//                 $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+//             });
+//         });
+//     });
 // console.log(coffeeSearch);
 
+function searchCoffees(value){
+    var filteredCoffees = [];
 
-if(coffeeSelection == coffeeSearch && updateCoffees == coffees.roast){
+    for (var i = 0; i<coffees.length; i++){
+        if (coffees[i].name.toLowerCase().indexOf(value.toLowerCase()) > -1){
+            filteredCoffees.push(coffees[i]);
+        }
+    }
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+};
 
-}
+
+// if(coffeeSelection == coffeeSearch && updateCoffees == coffees.roast){
+//
+// }
 
 
 
@@ -121,4 +132,5 @@ var coffeeSelection = document.querySelector('#myInput');
 
 tbody.innerHTML = renderCoffees(coffees);
 
+coffeeSelection.addEventListener('keyup', searchCoffees);
 submitButton.addEventListener('click', updateCoffees);
