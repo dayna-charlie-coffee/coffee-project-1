@@ -34,24 +34,31 @@ function updateCoffees(e) {
 }
 
 //for var coffeeSelection
-function coffeeSearch(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedCoffee = coffeeSelection.value;
-    var filteredCoffees = [];
+// function coffeeSearch(userInput) {
+//     e.preventDefault(); // don't submit the form, we just want to update the data
+//     var selectedCoffee = coffeeSelection.value;
+//     var filteredCoffees = [];
+//
+//     //attempt #1
+//     // coffees.forEach(function(coffee) {
+//     //     if (coffee.name === selectedCoffee) {
+//     //         filteredCoffees.push(coffee);
+//     //     }
+//
+//     //attempt #2
+//     // for(var i = 0; i < selectedCoffee; i++){
+//     //     if (selectedCoffee[i].match(userInput)){
+//     //         filteredCoffees.push(selectedCoffee[i]);
+//     //     }
+//     // }
+//
+//     //attempt #3
+//
+//     tbody.innerHTML = renderCoffees(filteredCoffees);
+// }
 
-    //attempt #1
-    // coffees.forEach(function(coffee) {
-    //     if (coffee.name === selectedCoffee) {
-    //         filteredCoffees.push(coffee);
-    //     }
 
-    //attempt #2
-    for(var i = 0; i < strArr)
 
-    });
-
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-}
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -75,7 +82,13 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 //adding for search function
-var coffeeSelection = document.querySelector('#site-search');
+// var coffeeSelection = document.queryCommandValue('#site-search');
+
+
+
+
+
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
