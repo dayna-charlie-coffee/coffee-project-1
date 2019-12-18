@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee Project</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     <h1>Coffee!</h1>
@@ -15,7 +16,10 @@
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Search coffee name">
+<!--        first attempt-->
+<!--        <input type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Search coffee name">-->
+<!--        second attempt-->
+        <input id="myInput" type="text" placeholder="Search for coffee here">
         <input id="submit" type="submit" />
 
 <!--        <input type="search" id="site-search" name="q" aria-label="Search through site content">-->
@@ -34,13 +38,26 @@
 <!--        <tbody id="coffees"></tbody>-->
 <!--    </table>-->
 
+<!--    <table>-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--            <th class="displayNone">ID</th>-->
+<!--            <th>NAME</th>-->
+<!--            <th>ROAST</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody id="coffees"></tbody>-->
+<!--    </table>-->
 
+<div id="coffeeDIV">
     <div id="coffees">
 
     </div>
+</div>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
     <script src="main.js"></script>
 </body>
 </html>

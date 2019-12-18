@@ -20,13 +20,25 @@ function renderCoffees(coffees) {
 
     return html;
 }
+//original
+// function updateCoffees(e) {
+//     e.preventDefault(); // don't submit the form, we just want to update the data
+//     var selectedRoast = roastSelection.value;
+//     var filteredCoffees = [];
+//     coffees.forEach(function(coffee) {
+//         if (coffee.roast === selectedRoast) {
+//             filteredCoffees.push(coffee);
+//         }
+//     });
+//     tbody.innerHTML = renderCoffees(filteredCoffees);
+// }
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast && coffeeSearch === coffeeSelection) {
             filteredCoffees.push(coffee);
         }
     });
@@ -58,14 +70,23 @@ function updateCoffees(e) {
 // }
 
 //attempt #3
-$(document).ready(function(){
-    $("#site-search").on("keyup", function() {
-        var value = $(this).val().toLowerCase();
-        $("#coffees").filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+
+var coffeeSearch =
+    $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#coffeeDIV *").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
         });
     });
-});
+// console.log(coffeeSearch);
+
+
+if(coffeeSelection == coffeeSearch && updateCoffees == coffees.roast){
+
+}
+
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -90,7 +111,7 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 //adding for search function
-// var coffeeSelection = document.queryCommandValue('#site-search');
+var coffeeSelection = document.querySelector('#myInput');
 
 
 
