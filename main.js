@@ -27,19 +27,21 @@ function renderCoffees(coffees) {
 
 //========= FILTER COFFEES ROAST AND SEARCHBOX INPUT ==========//
 var updateCoffees = function(e) {
-    // e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var selectedCoffee = coffeeSelection.value;
     var filteredCoffees = [];
+
     coffees.forEach(function(coffee) {
-        if ((coffee.roast === selectedRoast) && (coffee.name.toLowerCase().includes(selectedCoffee.toLowerCase()))) {
-
+        if ((coffee.roast === selectedRoast) || selectedRoast === "all") {
+            if (coffee.name.toLowerCase().includes(selectedCoffee.toLowerCase())){
             filteredCoffees.push(coffee);
+                }
         }
-
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 };
+
+
 
 
 
@@ -78,6 +80,8 @@ var coffeeSelection = document.querySelector('#myInput');
 
 
 tbody.innerHTML = renderCoffees(coffees);
+
+
 
 
 
