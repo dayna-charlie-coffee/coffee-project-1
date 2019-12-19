@@ -1,6 +1,29 @@
 "use strict"
 
 
+//============ VARIABLES ===============//
+var tbody = document.querySelector('#coffees');
+var roastSelection = document.querySelector('#roast-selection');
+
+//adding for search function
+var coffeeSelection = document.querySelector('#myInput');
+
+//========= ADD COFFEE =========//
+var createCoffee = document.querySelector('#submit');
+createCoffee.addEventListener('click', function () {
+    var addCoffeeRoast = document.getElementById("add-coffee");
+    var newCoffeeName = document.getElementById('newInput');
+
+    if (newCoffeeName !== ""){
+        newCoffee(addCoffeeRoast.value, newCoffeeName.value);
+        updateCoffees();
+    }
+});
+
+
+
+
+
 //======= Rendering Coffees ======//
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
@@ -23,10 +46,9 @@ function renderCoffees(coffees) {
 
 
 
-
-
 //========= FILTER COFFEES ROAST AND SEARCHBOX INPUT ==========//
-var updateCoffees = function(e) {
+var updateCoffees = function() {
+    // e.updateDefault
     var selectedRoast = roastSelection.value;
     var selectedCoffee = coffeeSelection.value;
     var filteredCoffees = [];
@@ -44,7 +66,13 @@ var updateCoffees = function(e) {
 
 
 
-
+//======== Create NEW COFFEE ========//
+var newCoffee = function (type, name) {
+    var newCoffeeObj = {id: coffees.length + 1, name: name, roast: type};
+    console.log(newCoffeeObj);
+    coffees.push(newCoffeeObj);
+    console.log(coffees);
+};
 
 
 //================= COFFESS TABLE ================//
@@ -67,28 +95,12 @@ var coffees = [
 ];
 
 
-//============ VARIABLES ===============//
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
-//adding for search function
-var coffeeSelection = document.querySelector('#myInput');
-
-
-
-
-
 
 tbody.innerHTML = renderCoffees(coffees);
 
 
-
-
-
-
 //============== COFFEE EVENT LISTENERS ==================//
 //original select submit
-submitButton.addEventListener('click', updateCoffees);
 
 //==== ADDED EVENT LISTENERS ====//
 roastSelection.addEventListener('change', updateCoffees);

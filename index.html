@@ -7,48 +7,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1>Coffee!</h1>
+    <h1>Tasty Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-<!--        first attempt-->
-<!--        <input type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Search coffee name">-->
-<!--        second attempt-->
-        <input id="myInput" type="text" placeholder="Search for coffee here">
-        <input id="submit" type="submit" />
+    <div>
 
-<!--        <input type="search" id="site-search" name="q" aria-label="Search through site content">-->
+            <label for="roast-selection">Search for coffee</label>
+            <select id="roast-selection">
+                <option>all</option>
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <input id="myInput" type="text" placeholder="Search for coffee here">
+
+    </div>
 
 
-    </form>
+    <div>
 
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th class="displayNone">ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
+            <label for="add-coffee">Add another coffee</label>
+            <select id="add-coffee">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <input id="newInput" type="text" placeholder="type away...">
+            <input id="submit" type="submit" />
 
-<!--    <table>-->
-<!--        <thead>-->
-<!--        <tr>-->
-<!--            <th class="displayNone">ID</th>-->
-<!--            <th>NAME</th>-->
-<!--            <th>ROAST</th>-->
-<!--        </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
+    </div>
+
 
 <div id="coffeeDIV">
     <div id="coffees">
