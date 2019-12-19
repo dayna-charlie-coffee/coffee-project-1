@@ -33,7 +33,7 @@ function renderCoffees(coffees) {
 //     tbody.innerHTML = renderCoffees(filteredCoffees);
 // }
 
-//original coffee updates
+//original coffee updates with jquery
 // function updateCoffees(e) {
 //     e.preventDefault(); // don't submit the form, we just want to update the data
 //     var selectedRoast = roastSelection.value;
@@ -46,20 +46,41 @@ function renderCoffees(coffees) {
 //     tbody.innerHTML = renderCoffees(filteredCoffees);
 // }
 
-function updateCoffees(e) {
+//working original without jquery
+// function updateCoffees(e) {
+//     e.preventDefault(); // don't submit the form, we just want to update the data
+//     var selectedRoast = roastSelection.value;
+//     var filteredCoffees = [];
+//     coffees.forEach(function(coffee) {
+//         if (coffee.roast === selectedRoast) {
+//             filteredCoffees.push(coffee);
+//         //     if(coffee.name === searchCoffees()){
+//         //         filteredCoffees.splice(coffee)
+//         //     }
+//         }
+//
+//     });
+//     tbody.innerHTML = renderCoffees(filteredCoffees);
+// }
+
+//testing update coffees
+var updateCoffees = function(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
+
             filteredCoffees.push(coffee);
-            // if(coffee.name === searchCoffees()){
-            //     filteredCoffees.splice(coffee)
-            // }
+            //     if(coffee.name === searchCoffees()){
+            //         filteredCoffees.splice(coffee)
+            //     }
         }
+
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
-}
+};
+
 
 //for var coffeeSelection
 // function coffeeSearch(userInput) {
@@ -106,7 +127,7 @@ function updateCoffees(e) {
 function searchCoffees(value){
     var filteredCoffees = [];
 
-    for (var i = 0; i<coffees.length; i++){
+    for (var i = 0; i < coffees.length; i++){
         if (coffees[i].name.toLowerCase().includes(value.toLowerCase())){
             filteredCoffees.push(coffees[i]);
         }
