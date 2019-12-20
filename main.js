@@ -63,8 +63,6 @@ var updateCoffees = function() {
 };
 
 
-
-
 //======== Create NEW COFFEE ========//
 var newCoffee = function (type, name) {
     var newCoffeeObj = {id: coffees.length + 1, name: name, roast: type};
@@ -87,7 +85,7 @@ var coffees = [
     {id: 9, name: 'Esqueleto Espresso', roast: 'Eagle Powers'},
     {id: 10, name: 'Ramses Francés', roast: 'Eagle Powers'},
     {id: 11, name: 'NACHOOO!', roast: 'Eagle Powers'},
-    {id: 12, name: "You're crasssy!", roast: 'Eagle Powers'},
+    {id: 12, name: "Crasssy Lady!", roast: 'Eagle Powers'},
     {id: 13, name: 'Anaconda Squeeze!', roast: 'Eagle Powers'},
 ];
 
