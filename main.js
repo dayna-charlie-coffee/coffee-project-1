@@ -83,7 +83,7 @@ var coffees = [
     {id: 4, name: 'Chancho', roast: 'Take It Easy'},
     {id: 5, name: 'Nipple Twist!', roast: 'Take It Easy'},
     {id: 7, name: 'Macho Nacho', roast: 'Eagle Powers'},
-    {id: 8, name: 'Eagle Powers', roast: 'Eagle Powers'},
+    {id: 8, name: 'Eagle Egg', roast: 'Eagle Powers'},
     {id: 9, name: 'Esqueleto Espresso', roast: 'Eagle Powers'},
     {id: 10, name: 'Ramses Francés', roast: 'Eagle Powers'},
     {id: 11, name: 'NACHOOO!', roast: 'Eagle Powers'},

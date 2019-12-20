@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
+
 /* Remove padding and margin and adding defaults */
         * {
             margin: 0;
@@ -11,12 +13,14 @@
             --font-color: #FEF1E0;
             }
 
-        body {
-            font: 62.5%/1.5  "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
+        body{
             background-color: var(--main-bg-color);
             color: #000000;
             }
 
+        #custom {
+            font-family: "Patua One", cursive;
+            }
 
 
 /*Set the <img> in display block and use margin auto to center*/
