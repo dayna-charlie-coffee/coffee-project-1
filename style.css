@@ -1,12 +1,65 @@
-/*from original*/
-/** {*/
-/*    border-collapse: collapse;*/
-/*    margin: 15px 0;*/
-/*}*/
+/* Remove padding and margin and adding defaults */
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            }
 
-/*td, th {*/
-/*    border: 1px solid black;*/
-/*    padding: 5px 10px;*/
-/*}*/
+        :root {
+            --main-bg-color: #65CFE5;
+            --secondary-color: #BF0200;
+            --font-color: #FEF1E0;
+            }
+
+        body {
+            font: 62.5%/1.5  "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
+            background-color: var(--main-bg-color);
+            color: #000000;
+            }
 
 
+
+/*Set the <img> in display block and use margin auto to center*/
+       .jumbotron {
+        background-color: var(--main-bg-color);
+       }
+
+
+
+
+/******  FONTS STYLING *******/
+        .coffee-name{
+            color: var(--secondary-color);
+            text-shadow: -1px 0 black,
+                         0 2px black,
+                         1px 0 black,
+                         0 -1px black;
+            margin-bottom: 0;
+            }
+
+        .coffee-roast {
+            color: var(--font-color);
+            font-size: 1.5rem;
+            }
+
+        h5  {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            }
+
+
+
+/************   INPUT STYLING   ************/
+        .search-input {
+            background-color: var(--font-color);
+            color: var(--secondary-color);
+            }
+
+        .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+            background-color: #910912 !important;
+            }
+
+        label {
+            color: var(--font-color);
+            font-size: 1rem;
+            }

@@ -2,48 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Coffee Project</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cafe Libre</title>
 <!--  BOOTSTRAP LINK  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+
+<!------- JUMBOTRON ------->
+        <div class="jumbotron jumbotron-fluid text-center p-0 mr-0">
+
+                <img src="img/nachooo.jpg" alt="Banner" class="img-fluid mx-0">
+
+        </div>
+
+        <hr class="bt-5 border-danger">
+
+
+<!------- MAIN CONTAINER ------->
 <div class="container">
-        <h1>Tasty Coffee!</h1>
 
-        <div>
-                <label for="roast-selection">Search for coffee</label>
-                <select id="roast-selection">
-                    <option>all</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <input id="myInput" type="text" placeholder="Search for coffee here">
+    <div class="container-fluid mt-4">
+
+        <div class="text-center">
+             <h5>Don't you want a little taste of the glory?</h5>
+
+
+
+        <!------------- USER INPUTS ------------>
+
+                    <!------- SEARCH ------->
+                                <div class="row pb-5">
+                                    <div class="col">
+                                        <div class="container text-left">
+                                            <label for="roast-selection">Roast Types</label>
+                                            <select id="roast-selection" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                <option class="dropdown-item">All</option>
+                                                <option class="dropdown-item">Nitty Gritty (Light)</option>
+                                                <option class="dropdown-item">Take it easy (Medium)</option>
+                                                <option class="dropdown-item">Eagle Powers (Dark)</option>
+                                            </select>
+                                            <input class="form-control mr-sm-2 search-input" id="myInput" type="text"
+                                                   placeholder="Search for café">
+                                        </div>
+                                    </div>
+
+
+                    <!------- ADD NEW COFFEE ------->
+                                    <div class="col">
+                                        <div class="container text-right">
+                                            <label for="add-coffee">Add another café</label>
+                                            <select id="add-coffee" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                <option class="dropdown-item">Nitty Gritty</option>
+                                                <option class="dropdown-item">Take It Easy</option>
+                                                <option class="dropdown-item">Eagle Power</option>
+                                            </select>
+
+                                            <div class="d-flex flex-wrap flex-row-reverse">
+                                                <input class="form-control search-input mb-1 mr-0" id="newInput"
+                                                       type="text"
+                                                       placeholder="type away...">
+                                                <input class="btn btn-primary my-2 my-sm-0" id="submit"
+                                                       type="submit" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+        <!--------------  COFFEES  ---------------->
+                    <div class="row mb-5" id="coffeeDIV">
+                        <div class="col ">
+                            <div id="coffees" class="d-flex flex-wrap justify-content-center text-center">
+
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="container p-5 m-5">
+                    <div class="row">
+                        <div class="col">
+
+                        </div>
+                    </div>
+                </div>
         </div>
 
 
-        <div>
-                <label for="add-coffee">Add another coffee</label>
-                <select id="add-coffee">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <input id="newInput" type="text" placeholder="type away...">
-                <input id="submit" type="submit" />
-        </div>
-
-
-        <div id="coffeeDIV">
-            <div id="coffees">
-
-            </div>
-        </div>
-</div>
+    </div> <!-----------SECOND CONTAINER-->
+</div> <!----------FIRST CONTAINER-->
 
 <!-- BOOTSTRAP SCRIPTS-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
